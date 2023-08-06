@@ -8,6 +8,8 @@ import com.sharad.ridersspot.service.AuthenticationService;
 import com.sharad.ridersspot.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
@@ -25,16 +27,16 @@ public class UserController {
 
     @PostMapping("/register")
     ResponseEntity<Token> register(@RequestBody UserDTO userDTO) throws UserAlreadyExistsException {
-            return ResponseEntity.ok(authenticationService.register(userDTO));
-//        UserDTO addedFrameDto = frameService.addFrame(frameDTO);
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.add("desc", "Added a frame");
-//        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(addedFrameDto);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("description", "User has been registered");
+        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(authenticationService.register(userDTO));
     }
 
     @PostMapping("/authenticate")
     ResponseEntity<Token> authenticate(@RequestBody Credentials credentials) throws UsernameNotFoundException {
-        return ResponseEntity.ok(authenticationService.authenticate(credentials));
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("description", "User has been registered");
+        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(authenticationService.authenticate(credentials));
     }
 
     @GetMapping

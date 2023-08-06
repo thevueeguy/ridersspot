@@ -71,11 +71,12 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler{
     }
 
     @ExceptionHandler(UserAlreadyExistsException.class)
-    public ResponseEntity<Object> handleUserAlreadyExists(UserAlreadyExistsException exc) {
-        String message = exc.getMessage();
+    public ResponseEntity<Object> handleUserAlreadyExists(UserAlreadyExistsException ex, HttpHeaders headers,
+                                                          HttpStatusCode status, WebRequest request) {
+        String message = ex.getMessage();
+        HttpStatus httpStatus = HttpStatus.valueOf(status.value());
         String error = "User already exists";
-        ApiError apiErrors = new ApiError(message,HttpStatus.NOT_ACCEPTABLE,LocalDateTime.now(),error,406);
-        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).header("error","book not found exception").body(apiErrors);
+        ApiError apiErrors = new ApiError(message,httpStatus,LocalDateTime.now(),error,status.value());
+        return ResponseEntity.status(status).headers(headers).body(apiErrors);
     }
-
 }
