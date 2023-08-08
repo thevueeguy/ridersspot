@@ -1,0 +1,15 @@
+.label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-underline-offset: 0.3rem;
+    letter-spacing: 0.1rem;
+    word-wrap: break-word;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+  }

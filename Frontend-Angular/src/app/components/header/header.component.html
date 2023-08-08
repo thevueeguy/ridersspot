@@ -1,0 +1,11 @@
+<mat-toolbar color="accent" class="header">
+    <span class="label" (click)="navigateToHome()">Ridersspot</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"  (click)="navigateToHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span *ngIf="!isLoggedIn" (click)="navigateToRegister()">Login / SignUp</span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" *ngIf="isLoggedIn"> 
+        <mat-icon>person_pin</mat-icon>
+    </button>
+</mat-toolbar>
