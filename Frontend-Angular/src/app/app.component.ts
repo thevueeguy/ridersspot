@@ -7,8 +7,8 @@ import { fader, slider, transformer, stepper } from './route-animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    fader,
-    // slider,
+    // fader,
+    slider,
     // transformer,
     // stepper
   ]

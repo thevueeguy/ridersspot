@@ -1,24 +1,40 @@
 .example-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
-  .label {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-  }
+.logoContainer {
+  height: 100%;
+  border-right: 0.3rem solid grey;
+  border-radius: 30%;
+  padding-right: 0.75rem;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
 
-  .label::after {
-    content: '';
-    border: 2px solid white;
-    margin-left: 0.5rem;
-  }
+.logoContainer:active {
+  transition: all 0.1s ease-in-out;
+  border-right: none;
+  padding-left:  0.3rem;
+}
 
-  .example-icon {
-    margin: 0 0.5rem;
-  }
+.example-icon {
+  margin: 0 0.5rem;
+}
 
-  span {
-    cursor: pointer;
-  }
+.logo {
+  object-fit: contain;
+  height: 100%;
+}
+
+.navBtn {
+  cursor: pointer;
+}
+
+.navBtn:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.navBtn:active {
+  font-size: 0.95rem;
+}

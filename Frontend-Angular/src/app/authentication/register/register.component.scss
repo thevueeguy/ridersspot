@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  width: 40%;
+  height: auto;
+}
+
+.image img {
+  width: 70%;
+}
+
+// form
+.form-box {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 1.5rem;
+  gap: 1rem;
+  text-align: center;
+  width: 40%;
+  background-color: rgb(248, 225, 140, 0.5);
+  border-radius: 15px 15px 0 0;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  padding: 1rem 1.5rem;
+  font-size: .85rem;
+  background-color: rgb(241, 212, 104, 0.8);
+  color: rgb(59, 59, 59);
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;    
+  width: 40%;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #ff8800;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: rgb(238, 164, 26, 0.8);
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.form button:hover {
+  color: antiquewhite;
+  background-color: rgb(184, 177, 157);
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .image {
+      width: 30%;
+  }
+
+  .form-box {
+    width: 70%;
+  }
+
+  .form {
+    width: 50%;
+  }
+
+  .form-section {
+    width: 50%;
+  }
+  
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .image {
+      display: none;
+  }
+
+  .form-box {
+    width: 80%;
+  }
+
+  .form {
+    width: 60%;
+  }
+
+  .form-section {
+    width: 60%;
+  }
+  
+}

@@ -54,7 +54,9 @@ function slideTo(direction: string) {
         style({
           position: 'absolute',
           [direction]: 0,
+          top: '50%',
           width: '100%',
+          transform: 'translate(0, -50%)'
         }),
       ],
       optional

@@ -10,16 +10,6 @@ const routes: Routes = [
     pathMatch: 'full',
     component: HomepageComponent,
     data: { animation: 'isLeft' }
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-    data: { animation: 'isLeft' }
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    data: { animation: 'isRight' }
   }
 ];
 
