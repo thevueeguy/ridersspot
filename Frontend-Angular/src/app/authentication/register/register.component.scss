@@ -118,9 +118,8 @@
 }
 
 @media only screen and (max-width: 1200px) {
-
   .image {
-      width: 30%;
+    width: 30%;
   }
 
   .form-box {
@@ -134,17 +133,29 @@
   .form-section {
     width: 50%;
   }
-  
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form button {
+    padding: 0.7rem 0.7rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media only screen and (max-width: 800px) {
   .container {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .image {
-      display: none;
+    display: none;
   }
 
   .form-box {
@@ -152,11 +163,31 @@
   }
 
   .form {
-    width: 80%;
+    width: 90%;
   }
 
   .form-section {
-    width: 80%;
+    width: 90%;
   }
-  
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .form button {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .form-section p {
+    font-size: 0.8rem;
+  }
+
+  .form-section a {
+    font-size: 0.8rem;
+  }
 }

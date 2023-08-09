@@ -55,8 +55,10 @@ function slideTo(direction: string) {
           position: 'absolute',
           [direction]: 0,
           top: '50%',
+          height: '100%',
           width: '100%',
-          transform: 'translate(0, -50%)'
+          transform: 'translate(0, -50%)',
+          display: "flex"
         }),
       ],
       optional
